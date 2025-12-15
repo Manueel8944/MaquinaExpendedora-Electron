@@ -1,0 +1,15 @@
+{
+  "name": "electron-ejempo",
+  "version": "1.0.0",
+  "description": "ejemplo",
+  "main": "main.js",
+  "scripts": {
+    "test": "hola",
+    "start": "electron ."
+  },
+  "author": "Manuel",
+  "license": "ISC",
+  "devDependencies": {
+    "electron": "^39.2.3"
+  }
+}
