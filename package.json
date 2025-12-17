@@ -1,15 +1,16 @@
 {
-  "name": "electron-ejempo",
+  "name": "app-electron",
   "version": "1.0.0",
-  "description": "ejemplo",
+  "description": "",
   "main": "main.js",
   "scripts": {
-    "test": "hola",
-    "start": "electron ."
+    "start": "electron .",
+    "test": "echo \"Error: no test specified\" && exit 1"
   },
-  "author": "Manuel",
+  "keywords": [],
+  "author": "",
   "license": "ISC",
   "devDependencies": {
-    "electron": "^39.2.3"
+    "electron": "^39.2.7"
   }
 }

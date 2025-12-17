@@ -1,0 +1,160 @@
+/* Reset global */
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  background: #111;
+  font-family: Arial, Helvetica, sans-serif;
+  overflow: hidden; /* No scroll externo */
+}
+
+/* CONTENEDOR PRINCIPAL */
+.maquina {
+  display: flex;
+  width: 100vw;
+  height: 100vh;
+  gap: 10px;
+  padding: 10px;
+}
+
+/* PRODUCTOS */
+.productos {
+  width: 65%;
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  /* filas calculadas para que todas quepan en la altura */
+  grid-template-rows: repeat(4, 1fr); /* si tienes 12 productos y 3 columnas → 4 filas */
+  gap: 10px;
+  height: 100%; /* limita la altura al contenedor */
+}
+
+.producto {
+  background: linear-gradient(145deg, #333, #111);
+  border-radius: 10px;
+  color: white;
+  text-align: center;
+  font-size: 12px;
+  box-shadow: inset 0 0 6px #000;
+  transition: 0.2s;
+
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+
+  /* quitar aspect-ratio, la altura se calcula con grid */
+  width: 100%;
+  height: 100%; /* ocupar toda la celda de grid */
+}
+
+/* PANEL DERECHO */
+.panel {
+  width: 35%;
+  background: #2c2c2c;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between; /* ABRIR abajo */
+  padding: 10px;
+  height: 100%;
+}
+
+/* PANTALLA */
+.pantalla {
+  background: black;
+  color: #00ff6a;
+  padding: 10px;
+  font-size: 18px;
+  text-align: center;
+  border-radius: 6px;
+  font-family: "Courier New", monospace;
+}
+
+/* TECLADO */
+.teclado {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 6px;
+}
+
+.teclado button {
+  padding: 12px;
+  font-size: 16px;
+  border: none;
+  border-radius: 8px;
+  background: #555;
+  color: white;
+  cursor: pointer;
+  transition: 0.2s;
+}
+
+.teclado button:hover {
+  background: #777;
+}
+
+.teclado .cero {
+  grid-column: span 3;
+}
+
+/* ACCIONES */
+.acciones {
+  display: flex;
+  gap: 8px;
+}
+
+.acciones button {
+  flex: 1;
+  padding: 12px;
+  font-size: 14px;
+  border-radius: 8px;
+  border: none;
+  background: #ff6600;
+  color: white;
+  cursor: pointer;
+  transition: 0.2s;
+}
+
+.acciones button:hover {
+  background: #ff8533;
+}
+
+/* DINERO */
+.dinero {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr); /* 3 botones por fila */
+  gap: 6px;
+}
+
+.dinero button {
+  padding: 10px;
+  font-size: 14px;
+  border-radius: 8px;
+  border: none;
+  background: #888;
+  color: black;
+  cursor: pointer;
+  transition: 0.2s;
+}
+
+.dinero button:hover {
+  background: #aaa;
+}
+
+/* BOTÓN ABRIR */
+.panel-abajo button {
+  width: 100%;
+  padding: 15px;
+  font-size: 16px;
+  border-radius: 8px;
+  border: none;
+  background: #0099ff;
+  color: white;
+  cursor: pointer;
+  transition: 0.2s;
+}
+
+.panel-abajo button:hover {
+  background: #33b3ff;
+}

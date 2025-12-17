@@ -3,12 +3,64 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
+
+    <title>Maquina Expendedora</title>
+    <link rel="stylesheet" href="style.css">
+    
 </head>
 <body>
-    <h1>Hola Electron</h1>
+  <div class="maquina">
 
-    <button id="btn">Saludar</button>
+    <!-- PRODUCTOS -->
+    <div class="productos">
+        <div class="producto">A1<br>Agua<br>€1</div>
+        <div class="producto">A2<br>Refresco<br>€2</div>
+        <div class="producto">A3<br>Zumo<br>€1.5</div>
+        <div class="producto">B1<br>Patatas<br>€1.8</div>
+        <div class="producto">B2<br>Chocolate<br>€2</div>
+        <div class="producto">B3<br>Galletas<br>€1.2</div>
+        <div class="producto">C1<br>Café<br>€1.3</div>
+        <div class="producto">C2<br>Sandwich<br>€2.5</div>
+        <div class="producto">C3<br>Energética<br>€2.2</div>
+        <div class="producto">D1<br>Chicles<br>€0.8</div>
+        <div class="producto">D2<br>Barrita<br>€1.5</div>
+        <div class="producto">D3<br>Gominolas<br>€1.2</div>
 
+    </div>
+
+    <!-- PANEL DERECHO -->
+    <div class="panel">
+      <div class="pantalla">INSERTE DINERO</div>
+
+      <div class="teclado">
+        <button>1</button><button>2</button><button>3</button>
+        <button>4</button><button>5</button><button>6</button>
+        <button>7</button><button>8</button><button>9</button>
+        <button class="cero">0</button>
+      </div>
+
+      <div class="acciones">
+        <button id="pedir">PEDIR</button>
+        <button id="devolver">DEVOLVER DINERO</button>
+      </div>
+
+      <div class="dinero">
+        <button>0.05€</button>
+        <button>0.10€</button>
+        <button>0.20€</button>
+        <button>0.50€</button>
+        <button>1€</button>
+        <button>2€</button>
+        <button>5€</button>
+        <button>10€</button>
+        <button>20€</button>
+      </div>
+
+      <div class="panel-abajo">
+        <button id="abrir">ABRIR</button>
+      </div>
+
+    </div>
+  </div>
 </body>
 </html>
