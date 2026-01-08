@@ -1,66 +1,154 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
 
     <title>Maquina Expendedora</title>
-    <link rel="stylesheet" href="style.css">
-    
-</head>
-<body>
-  <div class="maquina">
+    <link rel="stylesheet" href="style.css" />
+  </head>
+  <body>
+    <div class="modoMaquina">
+      <!-- PRODUCTOS -->
+      <div class="productos">
+        <div class="producto" id="producto1"></div>
+        <div class="producto" id="producto2"></div>
+        <div class="producto" id="producto3"></div>
+        <div class="producto" id="producto4"></div>
+        <div class="producto" id="producto5"></div>
+        <div class="producto" id="producto6"></div>
+        <div class="producto" id="producto7"></div>
+        <div class="producto" id="producto8"></div>
+        <div class="producto" id="producto9"></div>
+        <div class="producto" id="producto10"></div>
+        <div class="producto" id="producto11"></div>
+        <div class="producto" id="producto12"></div>
+      </div>
 
-    <!-- PRODUCTOS -->
-    <div class="productos">
-        <div class="producto">A1<br>Agua<br>€1</div>
-        <div class="producto">A2<br>Refresco<br>€2</div>
-        <div class="producto">A3<br>Zumo<br>€1.5</div>
-        <div class="producto">B1<br>Patatas<br>€1.8</div>
-        <div class="producto">B2<br>Chocolate<br>€2</div>
-        <div class="producto">B3<br>Galletas<br>€1.2</div>
-        <div class="producto">C1<br>Café<br>€1.3</div>
-        <div class="producto">C2<br>Sandwich<br>€2.5</div>
-        <div class="producto">C3<br>Energética<br>€2.2</div>
-        <div class="producto">D1<br>Chicles<br>€0.8</div>
-        <div class="producto">D2<br>Barrita<br>€1.5</div>
-        <div class="producto">D3<br>Gominolas<br>€1.2</div>
+      <!-- PANEL DERECHO -->
+      <div class="panel">
+        <div id="pantalla">INSERTE DINERO</div>
 
+        <div class="teclado">
+          <button id="1b">1</button>
+          <button id="2b">2</button>
+          <button id="3b">3</button>
+          <button id="4b">4</button>
+          <button id="5b">5</button>
+          <button id="6b">6</button>
+          <button id="7b">7</button>
+          <button id="8b">8</button>
+          <button id="9b">9</button>
+          <button class="cero" id="0b">0</button>
+        </div>
+
+        <div class="acciones">
+          <button id="pedir">PEDIR</button>
+          <button id="devolver">DEVOLVER DINERO</button>
+        </div>
+
+        <div class="dinero">
+          <button id="0.05e">0.05€</button>
+          <button id="0.10e">0.10€</button>
+          <button id="0.20e">0.20€</button>
+          <button id="0.50e">0.50€</button>
+          <button id="1e">1€</button>
+          <button id="2e">2€</button>
+          <button id="5e">5€</button>
+          <button id="10e">10€</button>
+          <button id="20e">20€</button>
+        </div>
+
+        <div class="panel-abajo">
+          <button id="abrir">ABRIR</button>
+        </div>
+      </div>
     </div>
 
-    <!-- PANEL DERECHO -->
-    <div class="panel">
-      <div class="pantalla">INSERTE DINERO</div>
+    <div class="modoAdmin" style="display: none">
+      <div class="admin-container">
+        <!-- HEADER -->
+        <div class="admin-header">
+          <h2>MODO ADMINISTRADOR</h2>
+        </div>
 
-      <div class="teclado">
-        <button>1</button><button>2</button><button>3</button>
-        <button>4</button><button>5</button><button>6</button>
-        <button>7</button><button>8</button><button>9</button>
-        <button class="cero">0</button>
+        <!-- PANEL PRINCIPAL -->
+        <div class="admin-panel">
+          <!-- MODIFICAR PRODUCTO -->
+          <div class="admin-card">
+            <h3>MODIFICAR PRODUCTO</h3>
+
+            <input type="number" id="adminCodigo" placeholder="Código producto" />
+            <input type="text" id="adminNombre" placeholder="Nombre" />
+            <input type="number" id="adminPrecio" placeholder="Precio (€)" />
+            <input type="text" id="adminImagen" placeholder="URL imagen" />
+
+            <div class="admin-buttons">
+              <button id="guardarProducto">GUARDAR CAMBIOS</button>
+              <button id="reponerStock">REPONER STOCK DE TODOS</button>
+            </div>
+          </div>
+
+          <!-- RETIRAR DINERO -->
+          <div class="admin-card">
+            <h3>RETIRAR DINERO</h3>
+
+            <div id="dineroAdmin">
+              <div id="dinero-5" class="dinero-item">
+                <span>€0.05</span>
+                <button class="retirar">RETIRAR TODO</button>
+              </div>
+
+              <div id="dinero-10" class="dinero-item">
+                <span>€0.10</span>
+                <button class="retirar">RETIRAR TODO</button>
+              </div>
+
+              <div id="dinero-20" class="dinero-item">
+                <span>€0.20</span>
+                <button class="retirar">RETIRAR TODO</button>
+              </div>
+
+              <div id="dinero-50" class="dinero-item">
+                <span>€0.50</span>
+                <button class="retirar">RETIRAR TODO</button>
+              </div>
+
+              <div id="dinero-100" class="dinero-item">
+                <span>€1</span>
+                <button class="retirar">RETIRAR TODO</button>
+              </div>
+
+              <div id="dinero-200" class="dinero-item">
+                <span>€2</span>
+                <button class="retirar">RETIRAR TODO</button>
+              </div>
+
+              <div id="dinero-500" class="dinero-item">
+                <span>€5</span>
+                <button class="retirar">RETIRAR TODO</button>
+              </div>
+
+              <div id="dinero-1000" class="dinero-item">
+                <span>€10</span>
+                <button class="retirar">RETIRAR TODO</button>
+              </div>
+
+              <div id="dinero-2000" class="dinero-item">
+                <span>€20</span>
+                <button class="retirar">RETIRAR TODO</button>
+              </div>
+
+            </div>
+          </div>
+        </div>
+
+        <div class="admin-footer">
+          <button id="cerrarAdmin">CERRAR ADMIN</button>
+        </div>
       </div>
-
-      <div class="acciones">
-        <button id="pedir">PEDIR</button>
-        <button id="devolver">DEVOLVER DINERO</button>
-      </div>
-
-      <div class="dinero">
-        <button>0.05€</button>
-        <button>0.10€</button>
-        <button>0.20€</button>
-        <button>0.50€</button>
-        <button>1€</button>
-        <button>2€</button>
-        <button>5€</button>
-        <button>10€</button>
-        <button>20€</button>
-      </div>
-
-      <div class="panel-abajo">
-        <button id="abrir">ABRIR</button>
-      </div>
-
     </div>
-  </div>
-</body>
+
+    <script src="renderer.js"></script>
+  </body>
 </html>

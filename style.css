@@ -1,4 +1,3 @@
-/* Reset global */
 * {
   box-sizing: border-box;
   margin: 0;
@@ -8,11 +7,10 @@
 body {
   background: #111;
   font-family: Arial, Helvetica, sans-serif;
-  overflow: hidden; /* No scroll externo */
+  overflow: hidden;
 }
 
-/* CONTENEDOR PRINCIPAL */
-.maquina {
+.modoMaquina {
   display: flex;
   width: 100vw;
   height: 100vh;
@@ -20,15 +18,13 @@ body {
   padding: 10px;
 }
 
-/* PRODUCTOS */
 .productos {
   width: 65%;
   display: grid;
   grid-template-columns: repeat(3, 1fr);
-  /* filas calculadas para que todas quepan en la altura */
-  grid-template-rows: repeat(4, 1fr); /* si tienes 12 productos y 3 columnas → 4 filas */
+  grid-template-rows: repeat(4, 1fr);
   gap: 10px;
-  height: 100%; /* limita la altura al contenedor */
+  height: 100%;
 }
 
 .producto {
@@ -39,30 +35,25 @@ body {
   font-size: 12px;
   box-shadow: inset 0 0 6px #000;
   transition: 0.2s;
-
   display: flex;
   flex-direction: column;
   justify-content: center;
   align-items: center;
-
-  /* quitar aspect-ratio, la altura se calcula con grid */
   width: 100%;
-  height: 100%; /* ocupar toda la celda de grid */
+  height: 100%;
 }
 
-/* PANEL DERECHO */
 .panel {
   width: 35%;
   background: #2c2c2c;
   display: flex;
   flex-direction: column;
-  justify-content: space-between; /* ABRIR abajo */
+  justify-content: space-between;
   padding: 10px;
   height: 100%;
 }
 
-/* PANTALLA */
-.pantalla {
+#pantalla {
   background: black;
   color: #00ff6a;
   padding: 10px;
@@ -72,7 +63,6 @@ body {
   font-family: "Courier New", monospace;
 }
 
-/* TECLADO */
 .teclado {
   display: grid;
   grid-template-columns: repeat(3, 1fr);
@@ -98,7 +88,6 @@ body {
   grid-column: span 3;
 }
 
-/* ACCIONES */
 .acciones {
   display: flex;
   gap: 8px;
@@ -120,10 +109,9 @@ body {
   background: #ff8533;
 }
 
-/* DINERO */
 .dinero {
   display: grid;
-  grid-template-columns: repeat(3, 1fr); /* 3 botones por fila */
+  grid-template-columns: repeat(3, 1fr);
   gap: 6px;
 }
 
@@ -142,7 +130,6 @@ body {
   background: #aaa;
 }
 
-/* BOTÓN ABRIR */
 .panel-abajo button {
   width: 100%;
   padding: 15px;
@@ -157,4 +144,148 @@ body {
 
 .panel-abajo button:hover {
   background: #33b3ff;
+}
+
+.modoAdmin {
+  width: 100vw;
+  height: 100vh;
+  background: #111;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.admin-container {
+  width: 90%;
+  max-width: 1200px;
+  height: 90%;
+  background: #222;
+  border-radius: 12px;
+  padding: 20px;
+  display: flex;
+  flex-direction: column;
+}
+
+.admin-header {
+  text-align: center;
+  color: #00ff6a;
+  font-family: "Courier New", monospace;
+  margin-bottom: 20px;
+}
+
+.admin-panel {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 20px;
+  flex: 1;
+  overflow: hidden;
+}
+
+.admin-card {
+  background: linear-gradient(145deg, #333, #111);
+  border-radius: 12px;
+  padding: 15px;
+  color: white;
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+  height: 100%;
+  overflow-y: auto;
+  box-shadow: inset 0 0 8px #000;
+}
+
+.admin-card h3 {
+  text-align: center;
+  margin-bottom: 10px;
+  color: #ffcc00;
+}
+
+.admin-card input {
+  padding: 10px;
+  border-radius: 6px;
+  border: none;
+  font-size: 14px;
+  background: #444;
+  color: white;
+}
+
+.admin-card input:disabled {
+  background: #555;
+  color: #aaa;
+}
+
+.admin-card button {
+  padding: 12px;
+  border-radius: 8px;
+  border: none;
+  background: #0099ff;
+  color: white;
+  font-size: 15px;
+  cursor: pointer;
+  transition: 0.2s;
+}
+
+.admin-card button:hover {
+  background: #33b3ff;
+}
+
+.admin-buttons {
+  display: flex;
+  gap: 10px;
+  margin-top: 10px;
+}
+
+#dineroAdmin {
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+}
+
+.dinero-item {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  background: #333;
+  padding: 8px;
+  border-radius: 6px;
+}
+
+.dinero-item span {
+  font-size: 14px;
+}
+
+.dinero-item button.retirar {
+  padding: 6px 10px;
+  border-radius: 6px;
+  border: none;
+  background: #ff6600;
+  color: white;
+  cursor: pointer;
+  font-size: 12px;
+  transition: 0.2s;
+}
+
+.dinero-item button.retirar:hover {
+  background: #ff8533;
+}
+
+.admin-footer {
+  margin-top: 20px;
+  flex-shrink: 0;
+}
+
+.admin-footer button {
+  width: 100%;
+  padding: 15px;
+  font-size: 16px;
+  border-radius: 8px;
+  border: none;
+  background: red;
+  color: white;
+  cursor: pointer;
+  transition: 0.2s;
+}
+
+.admin-footer button:hover {
+  background: darkred;
 }

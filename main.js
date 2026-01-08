@@ -1,4 +1,4 @@
-const { app, BrowserWindow } = require('electron')
+const { app, BrowserWindow, ipcMain } = require("electron");
 
 const createWindow = () => {
   const window = new BrowserWindow({
@@ -9,10 +9,11 @@ const createWindow = () => {
       nodeIntegration: true,
       contextIsolation: false,
     },
-    })
-    window.loadFile('index.html')
-}
+  });
+
+  window.loadFile("index.html");
+};
 
 app.whenReady().then(() => {
-  createWindow()
-})
+  createWindow();
+});
